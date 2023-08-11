@@ -1,0 +1,105 @@
+body{
+    background-image: url("events.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section1{
+    display: flex;
+    column-gap: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+#section2{
+    background-color: rgba(8, 8, 8, 0.6);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    margin-top: 2%;
+}
+
+#section2:hover{
+    background-color: rgb(204, 68, 91);
+}
+
+#section3{
+    background-color: rgba(8, 8, 8, 0.6);
+    display: flex;
+    flex-direction: column;
+    height: 590px;
+    justify-content: center;
+}
+
+
+.pchild{
+    background-color: white;
+    color: rgb(22, 20, 20);
+    margin-left: 10px;
+}
+
+h2{
+    width: 70%;
+    background-color: rgb(15, 14, 15);
+    height: 100%;
+    margin-top: -1px;
+    text-align: center;
+    color: white;
+}
+
+.pdiv{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.childdiv{
+    margin-bottom: 15px;
+    width: 95%;
+    margin-left: 2%;
+}
+
+h1{
+    text-align: left;
+    color: white;
+    padding-left: 10px;
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+#firstP{
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+a{
+    padding: 5px;
+    border: 2px solid black;
+    background-color: white;
+    width: 18%;
+    padding-top: 2px;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+.section2:hover {
+    background-color: pink;
+}
+
+h2:hover{
+    background-color: rgb(204, 68, 91);
+}
+
+h3{
+    margin-bottom: -10px;
+    padding-left: 10px;
+}
+
+a:hover{
+    background-color: rgb(68, 161, 204);
+    text-decoration: underline;
+}

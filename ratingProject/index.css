@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --star-image: url("./images/inactiveStar.png");
+}
+
+.container {
+  max-width: min(670px, 80%);
+  /* max-width: clamp(60%, 630px, 80%); */
+
+  margin: 5em auto 2em auto;
+  border: 2px solid red;
+  display: flex;
+}
+
+.imageWrapper {
+  width: 134px;
+  aspect-ratio: 1/1;
+  line-height: 0;
+  border: 1px solid black;
+  background-image: var(--star-image)
+}
+
+.container:hover {
+  --star-image: url("./images/activeStar.png");
+}
+ 
+ /* here we get the required image by changing the assigned value of the variable to different image .  */
+
+.container:hover .imageWrapper:hover ~ .imageWrapper {
+  --star-image: url("./images/inactiveStar.png");
+}

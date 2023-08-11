@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --marker-dia: 40px;
+    --marker-wrapper-width: 60px;
+    --line-width: 10px;
+    --row-gap: 30px;
+}
+
+.section1{
+    max-width: 1300px;
+    margin: 60px 20px;
+}
+
+.parentDiv{
+    /* margin: 50px; */
+    display: flex;
+    column-gap: 40px;
+    /* padding: 5px; */
+}
+
+.parentDiv + .parentDiv{
+    margin-top: var(--row-gap);
+}
+
+.childDiv{
+    display: flex;
+    align-items: center;
+}
+
+.description{
+    margin-top: 15px;
+}
+
+.contentContainer{
+    display: flex;
+    /* flex-direction: column; */
+    /* outline: 2px solid red; */
+    column-gap: 10px;
+    position: relative;
+}
+.parentDiv:not(:first-child) .contentContainer::before{
+    content: "";
+    width: var(--line-width);
+    position: absolute;
+    left: calc(var(--marker-wrapper-width) / 2 - var(--line-width) / 2);
+    background-color: lightgreen;
+    height: 50%;
+}
+.parentDiv:not(:last-child) .contentContainer::after{
+    content: "";
+    width: var(--line-width);
+    position: absolute;
+    /* height: 100%; */
+    left: calc(var(--marker-wrapper-width) / 2 - var(--line-width) / 2);
+    background-color: lightgreen;
+    bottom: calc(-1 * var(--row-gap));
+    top: calc(100% / 2);
+    /* border: 2px solid green; */
+}
+
+.markerWrapper {
+    flex-basis: var(--marker-wrapper-width);
+    flex-shrink: 0;
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marker{
+    height: var(--marker-dia);
+    width: var(--marker-dia);
+    background-color: lightgreen;
+    border-radius: 50%;
+}
